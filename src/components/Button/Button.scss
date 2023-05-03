@@ -1,0 +1,45 @@
+@import "../../styles/mixins.scss";
+
+.button {
+  position: relative;
+  width: 91%;
+  height: 70px;
+  background-color: #2D3E4E;
+  border-radius: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  border: 0;
+
+  .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .text {
+    @include buttonText;
+    -webkit-line-clamp: 1;
+  }
+
+  .textWithIcon {
+    @include buttonText;
+    -webkit-line-clamp: 2;
+  }
+
+  &:hover {
+    background-color: #3D4E5E;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+

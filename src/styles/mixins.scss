@@ -1,0 +1,55 @@
+@import "globals";
+
+@mixin gridProps($grid-row-start, $grid-column-start, $grid-row-end, $grid-column-end) {
+  grid-row-start: $grid-row-start;
+  grid-column-start: $grid-column-start;
+  grid-row-end: $grid-row-end;
+  grid-column-end: $grid-column-end;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexStart {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin buttonHoverGreenBg {
+  &:hover {
+    background-color: $green;
+    transition: background-color 1s ease-in-out;
+    .button {
+      background-color: $green;
+      border: 2px solid $white;
+    }
+  }
+}
+
+@mixin buttonHoverGreenBorder{
+  &:hover {
+    border: 15px solid #07C06A;
+    transition: border 1s ease-in-out;
+    .button {
+      background-color: $green;
+    }
+  }
+}
+
+@mixin buttonText {
+  margin: auto auto auto 10px;
+  font-weight: 600;
+  line-height: 1.3em;
+  max-height: 3.2em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-size: 19px;
+}

@@ -1,0 +1,98 @@
+@import './styles/globals';
+@import './styles/mixins';
+
+.container {
+  height: 100%;
+  padding: 64px;
+
+  .title {
+    width: 285px;
+    height: 66px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 66px;
+    color: #FFFFFF;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-bottom: 12px;
+  }
+
+  .horizontalLine {
+    width: 100%;
+    height: 1px;
+    mix-blend-mode: normal;
+    opacity: 0.2;
+    border: 1px solid #FFFFFF;
+    margin-bottom: 48px;
+  }
+}
+
+
+.gridContainer {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 8px;
+  height: 100vh;
+  width: 100%;
+
+  @media (min-width: $min-width) {
+    font-size: calc(16px + ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})) * 4px);
+  }
+}
+
+#item-0 {
+  background-color: $white;
+  @include gridProps(1, 1, 3, 2);
+  @include flexCenter;
+  @include buttonHoverGreenBg
+
+}
+
+#item-1 {
+  background-color: $white;
+  @include gridProps(1, 2, 2, 3);
+  @include flexCenter;
+  @include buttonHoverGreenBg
+}
+
+#item-2 {
+  background-color: $white;
+  @include gridProps(1, 3, 2, 4);
+  @include flexCenter;
+  @include buttonHoverGreenBg
+}
+
+#item-3 {
+  background-color: $white;
+  @include gridProps(1, 4, 2, 5);
+  @include flexCenter;
+  @include buttonHoverGreenBg
+}
+
+#item-4 {
+  background-color: $white;
+  @include gridProps(2, 2, 3, 3);
+  @include flexStart;
+  @include buttonHoverGreenBg
+}
+
+#item-5 {
+  background-color: $white;
+  @include gridProps(2, 3, 3, 4);
+  @include flexStart;
+  @include buttonHoverGreenBg
+}
+
+#item-6 {
+  background-color: $white;
+  @include gridProps(2, 4, 3, 5);
+  @include buttonHoverGreenBorder;
+  @include flexStart;
+}
