@@ -10,7 +10,7 @@ export const MainPage = () => {
       <div className="gridContainer">
         <div id="item-0"><Button variant={'icon'} disabled={false}/></div>
         <div id="item-1"><Button variant={'icon'} disabled={false}/></div>
-        <div id="item-2"><Button variant={'default'} disabled={true}/></div>
+        <div id="item-2"><Button variant={'default'} disabled={false}/></div>
         <div id="item-3"><Button variant={'icon'} disabled={false}/></div>
         <div id="item-4"><Button variant={'icon'} disabled={false}/></div>
         <div id="item-5"><Button variant={'icon'} disabled={true}/></div>

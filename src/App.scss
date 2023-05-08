@@ -32,6 +32,7 @@
 }
 
 
+
 .gridContainer {
   display: grid;
 
@@ -42,8 +43,12 @@
   height: 100vh;
   width: 100%;
 
-  @media (min-width: $min-width) {
-    font-size: calc(16px + ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})) * 4px);
+  @media (min-width: var($min-width)) {
+    min-width: var($min-width);
+  }
+
+  @media (min-width: var($max-width)) {
+    max-width: var($max-width);
   }
 }
 

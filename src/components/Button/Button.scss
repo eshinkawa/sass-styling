@@ -1,4 +1,5 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/globals.scss";
 
 .button {
   position: relative;
@@ -10,11 +11,11 @@
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
-  font-size: 19px;
   font-weight: 600;
   color: #fff;
   overflow: hidden;
   border: 0;
+  font-size: 11px;
 
   .icon {
     display: flex;
@@ -41,5 +42,6 @@
     transition: background-color 0.3s ease-in-out;
   }
 }
+
 
 

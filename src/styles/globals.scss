@@ -1,5 +1,12 @@
+@use "sass:math";
+
 $min-width: 768px;
 $max-width: 1680px;
 $bg-color: #2D3E4E;
 $green: #07C06A;
 $white: #fff;
+
+
+@function pxToRem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
